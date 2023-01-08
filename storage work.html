@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>login form</h1>
+    <br />
+    <input type="text" name="" id="user" placeholder="username" />
+    <br />
+    <br />
+    <input type="text" name="" id="pass" placeholder="password" />
+    <br />
+    <br />
+    <button onclick="login()">login</button>
+
+    <script>
+      function login() {
+        var user = document.getElementById("user").value;
+        var pass = document.getElementById("pass").value;
+
+        localStorage.setItem("username", "Naufel");
+        localStorage.setItem("password", "nofil");
+
+        var localname = localStorage.getItem("username");
+        var localpass = localStorage.getItem("password");
+
+        if (user == localname && pass == localpass) {
+          alert("login successful");
+        } else {
+          alert("Enter correct credentials");
+        }
+      }
+    </script>
+  </body>
+</html>
